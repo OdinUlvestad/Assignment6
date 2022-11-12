@@ -16,5 +16,5 @@ jobs:
       id: build
       run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/Portifolio
     - name: Push the Docker image
-    id: push
-    run: docker push ${{ secrets.DOCKER_USER }}/Portifolio
+      id: push
+      run: docker push ${{ secrets.DOCKER_USER }}/Portifolio
