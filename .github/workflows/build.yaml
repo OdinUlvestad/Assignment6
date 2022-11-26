@@ -34,5 +34,4 @@ jobs:
           tags: ${{ secrets.DOCKER_USER }}/assignment6
       -
         name: Inspect
-          run: |
-            docker image inspect myimage:latest
+          run: docker image inspect myimage:latest
