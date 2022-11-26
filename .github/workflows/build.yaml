@@ -4,17 +4,23 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+
 jobs:
-  build:
+  docker:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Login to Docker Hub
-      id: login
-      run: docker login -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}
-    - name: Build the Docker image
-      id: build
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/assignment6
-    - name: Push the Docker image
-      id: push
-      run: docker push ${{ secrets.DOCKER_USER }}/assignment6
+      -
+        name: Checkout
+        uses: actions/Checkout@v3
+      - 
+        name: Set up support Docker container for running x86_64 virtal machines using QEMU
+        uses: docker/setup-qemu-action@v2
+      - 
+        name: CLI plugin that extends the docker command with the full support of the features provided by Moby BuildKit builder toolkit
+        uses: docker/setup-buildx-action@v2
+      - 
+        name: Log in to docker
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
