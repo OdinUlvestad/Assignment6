@@ -40,3 +40,7 @@ jobs:
           context: .
           load: true
           tags: myimage:latest
+
+      - name: Inspect
+        run: |
+          docker image inspect myimage:latest
