@@ -32,6 +32,15 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/assignment6
+
+      -
+        name: Build and view
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          load: true
+          tags: myimage:latest
       -
         name: Inspect
-          run: docker image inspect myimage:latest
+          run: |
+            docker image inspect myimage:latest
