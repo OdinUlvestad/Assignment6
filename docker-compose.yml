@@ -1,3 +1,10 @@
 services:
-  my-service:
-    network_mode: host
+  app:
+    image: node:18-alpine
+    ports:
+      - 3000:3000
+    working_dir: /Hello
+    volumes:
+      - volume_test-data:/Hello
+volumes:
+  - volume_test-data
