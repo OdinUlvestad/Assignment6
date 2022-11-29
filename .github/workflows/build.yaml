@@ -45,8 +45,8 @@ jobs:
         run: |
           docker image inspect myimage:latest
       
-      - name: Fetch image for application
-        run: |
-          docker run -d --rm --name web-test -p 80:8000 crccheck/hello-world
-          curl localhost
-          curl -I localhost
+      #- name: Fetch image for application
+       # run: |
+        #  docker run -d --rm --name web-test -p 80:8000 crccheck/hello-world
+         # curl localhost
+          #curl -I localhost
