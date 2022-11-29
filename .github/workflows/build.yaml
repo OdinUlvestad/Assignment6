@@ -48,4 +48,5 @@ jobs:
       - name: Fetch image for application
         run: |
           docker run -d --rm --name web-test -p 80:8000 crccheck/hello-world
-          curl localhost  
+          curl localhost
+          curl -I localhost
