@@ -1,4 +1,4 @@
-FROM ubuntu-latest
+FROM zephyrlw/assignment6
 RUN rm -r Hello
 RUN mkdir Hello
 ADD HelloWorld.txt /Hello
