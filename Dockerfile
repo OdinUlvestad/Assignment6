@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
-COPY HelloWorld.txt /tmp/
-RUN pip install --requirement /tmp/HelloWorld.txt
-COPY . /tmp/
+COPY HelloWorld.txt HelloWorld.txt
+RUN make HelloWorld.txt
 CMD ["cat HelloWorld"]
 
