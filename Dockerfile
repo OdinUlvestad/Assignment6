@@ -1,4 +1,4 @@
-FROM zephyrlw/assignment6
+FROM zephyrlw/assignment6:latest
 RUN rm -r Hello
 RUN mkdir Hello
 ADD HelloWorld.txt /Hello
