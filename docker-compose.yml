@@ -1,9 +1,9 @@
 services:
   - docker
 
-#branches:
-  #only:
-   # - master
+branches:
+  only:
+    - master
 
 before_install:
   - docker build -t hello-world .
