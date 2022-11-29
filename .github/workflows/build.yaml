@@ -44,6 +44,10 @@ jobs:
       - name: Inspect
         run: |
           docker image inspect myimage:latest
+
+      - name: Open text file
+        run: |
+          cat HelloWorld.txt
       
       #- name: Fetch image for application
        # run: |
