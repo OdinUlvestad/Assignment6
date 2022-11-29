@@ -5,5 +5,5 @@ ADD HelloWorld.txt /Hello
 EXPOSE 80/tcp
 EXPOSE 80/udp
 
-EXPOSE 8000
+EXPOSE 80:8000
 
