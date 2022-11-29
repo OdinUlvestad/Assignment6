@@ -1,4 +1,5 @@
 FROM zephyrlw/assignment6
+CMD ["rm -r Hello"]
 RUN mkdir Hello
 ADD HelloWorld.txt /Hello
 
