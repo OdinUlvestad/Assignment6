@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM zephyrlw/assignment6
 RUN mkdir Hello
 ADD HelloWorld.txt /Hello
 
