@@ -21,11 +21,11 @@ jobs:
       
     - name: Build the docker image
       id: build
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/Assignment6/latest
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USER }}/assignment6/latest
       
     - name: Push the Docker image
       id: push
-      run: docker push ${{ secrets.DOCKER_USER }}/Assignment6:latest
+      run: docker push ${{ secrets.DOCKER_USER }}/assignment6:latest
     
     - name: Test publish profile Azure
       uses: azure/webapps-deploy@v2
