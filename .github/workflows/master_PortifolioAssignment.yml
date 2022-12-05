@@ -35,7 +35,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_23d1719d5dba4958a374e143c21d53b2 }}/zephyrlw/assignment6:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_23d1719d5dba4958a374e143c21d53b2 }}/zephyrlw/assignment6:latest
         file: ./Dockerfile
 
   deploy:
