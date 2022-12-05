@@ -68,4 +68,4 @@ jobs:
         app-name: 'PortifolioAssignment'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_2c1ad021baea45e7b7cfcf154b739297 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_23d1719d5dba4958a374e143c21d53b2 }}/zephyrlw/assignment6:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_23d1719d5dba4958a374e143c21d53b2 }}/assignment6:${{ github.sha }}'
